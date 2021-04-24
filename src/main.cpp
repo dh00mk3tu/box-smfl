@@ -46,6 +46,11 @@ int main() {
             rect.move(0.0f, 0.1f);
         }
 
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            sf::Vector2i mouseP = ::Mouse::getPosition(window);
+            // printf("x: %i y: %i", mouseP.x, mouseP.y);
+            rect.setPosition((float)mouseP.x, static_cast<float>(mouseP.y));
+        }   
         window.draw(rect);
         window.display();
         window.clear();
