@@ -7,9 +7,9 @@ using namespace sf;
 int main() {
     
     RenderWindow window(VideoMode(600, 400), "Vector Paint Init", Style::Close | Style::Titlebar | Style::Resize);
-    sf::RectangleShape rect(sf::Vector2f(10.0f, 10.0f));
-    rect.setFillColor(sf::Color::Green);
-    rect.setOrigin(5.0f, 5.0f);
+    sf::RectangleShape rect(sf::Vector2f(1.0f, 1.0f));
+    rect.setFillColor(sf::Color::White);
+    rect.setOrigin(0.5f, 0.5f);
 
     while (window.isOpen())
     {
@@ -17,7 +17,7 @@ int main() {
         while(window.pollEvent(evnt)) {
             
             switch (evnt.type) {
-                
+
                 case sf::Event::Closed:
                     window.close();
                     break;
