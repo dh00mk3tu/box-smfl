@@ -30,6 +30,12 @@ int main() {
                 if (evnt.text.unicode < 128) {
                     printf("%c", evnt.text.unicode);
                 }
+
+            case sf::Event::Mouse::Click:
+                sf::Vector2i mousePrint = ::Mouse::getPosition(window);
+                printf("x: %i y: %i", mousePrint.x, mousePrint.y);
+                break;
+                
             default:
                 break;
             }
