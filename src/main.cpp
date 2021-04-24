@@ -9,6 +9,8 @@ int main() {
     RenderWindow window(VideoMode(600, 400), "Init", Style::Close | Style::Titlebar | Style::Resize);
     sf::RectangleShape rect(sf::Vector2f(30.0f, 30.0f));
     rect.setFillColor(sf::Color::Green);
+    rect.setOrigin(15.0f, 15.0f);
+
     while (window.isOpen())
     {
         sf::Event evnt;
@@ -53,7 +55,7 @@ int main() {
         }   
         window.draw(rect);
         window.display();
-        window.clear();
+        // window.clear();
 
     }
     return 0;
