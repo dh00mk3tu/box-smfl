@@ -8,6 +8,7 @@ int main() {
     
     RenderWindow window(VideoMode(600, 400), "Vector Paint Init", Style::Close | Style::Titlebar | Style::Resize);
     sf::RectangleShape rect(sf::Vector2f(2.0f, 2.0f));
+    sf::CircleShape brush(sf::Vector2f(1.0f));
     rect.setFillColor(sf::Color::White);
     rect.setOrigin(1.0f, 1.0f);
 
