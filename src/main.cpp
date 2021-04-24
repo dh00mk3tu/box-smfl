@@ -7,9 +7,9 @@ using namespace sf;
 int main() {
     
     RenderWindow window(VideoMode(600, 400), "Vector Paint Init", Style::Close | Style::Titlebar | Style::Resize);
-    sf::RectangleShape rect(sf::Vector2f(30.0f, 30.0f));
+    sf::RectangleShape rect(sf::Vector2f(10.0f, 10.0f));
     rect.setFillColor(sf::Color::Green);
-    rect.setOrigin(15.0f, 15.0f);
+    rect.setOrigin(5.0f, 5.0f);
 
     while (window.isOpen())
     {
@@ -52,7 +52,6 @@ int main() {
             sf::Vector2i mouseP = ::Mouse::getPosition(window);
             rect.setPosition((float)mouseP.x, static_cast<float>(mouseP.y));
             printf("x: %i y: %i", mouseP.x, mouseP.y);
-
         }   
         window.draw(rect);
         window.display();
