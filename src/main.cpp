@@ -16,21 +16,21 @@ int main() {
         sf::Event evnt;
         while(window.pollEvent(evnt)) {
             
-            switch (evnt.type)
-            {
-            case sf::Event::Closed:
-                window.close();
-                break;
-            case sf::Event::Resized:
-                cout<<"Width: "<<evnt.size.width<<" Height: "<<evnt.size.height<<endl;
-                // printf("New Width: %i New Height: %i\n", evnt.size.width, evnt.size.height);
-                break;
+            switch (evnt.type) {
+                
+                case sf::Event::Closed:
+                    window.close();
+                    break;
+                case sf::Event::Resized:
+                    cout<<"Width: "<<evnt.size.width<<" Height: "<<evnt.size.height<<endl;
+                    // printf("New Width: %i New Height: %i\n", evnt.size.width, evnt.size.height);
+                    break;
 
-            case sf::Event::TextEntered:
-                if (evnt.text.unicode < 128) {
-                    printf("%c", evnt.text.unicode);
-                }
-                break;
+                case sf::Event::TextEntered:
+                    if (evnt.text.unicode < 128) {
+                        printf("%c", evnt.text.unicode);
+                    }
+                    break;
 
             // case sf::Mouse::isButtonPressed::Left:
             //     sf::Vector2i mousePrint = ::Mouse::getPosition(window);
