@@ -58,12 +58,12 @@ int main() {
 
         if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
             sf::Vector2i mouseP = ::Mouse::getPosition(window);
-            rect.setPosition((float)mouseP.x, static_cast<float>(mouseP.y));
+            // rect.setPosition((float)mouseP.x, static_cast<float>(mouseP.y));
             printf("x: %i y: %i", mouseP.x, mouseP.y);
         }   
         window.draw(rect);
         window.display();
-        // window.clear();
+        window.clear();
 
     }
     return 0;
